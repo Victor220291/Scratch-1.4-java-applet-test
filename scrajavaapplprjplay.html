@@ -1,0 +1,93 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@200&display=swap" rel="stylesheet">
+<style>
+h1{
+font-family: 'Antonio', sans-serif;
+text-align: center
+}
+h2{
+font-family: 'Antonio', sans-serif;
+text-align: center
+}
+h3{
+font-family: 'Antonio', sans-serif;
+text-align: center
+}
+h4{
+font-family: 'Antonio', sans-serif;
+text-align: center
+}
+h5{
+font-family: 'Antonio', sans-serif;
+text-align: center
+}
+h6{
+font-family: 'Antonio', sans-serif;
+text-align: center
+}
+p{
+font-family: 'Roboto', sans-serif;
+text-align: center
+}
+a{
+font-family: 'Roboto', sans-serif;
+color: #006a4e;
+text-decoration: none;
+}
+button {
+  background-color: #006a4e;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input {
+  background-color: #eeeeee;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+textarea {
+  background-color: #eeeeee;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  margin: 4px 2px;
+  display: inline-block;
+  cols: 95;
+  rows: 10;
+}
+</style>
+
+<h1>Scratch Java Applet project Player</h1>
+<p>made by victor220</p>
+<a href="scrappprjplayupl.html">Upload SB file to base64 url</a>
+<p>
+<input type="text" id="project" />
+<button onclick="startProj()">Start Project</button>
+</p>
+
+<p id="applet"></p>
+
+<script type="text/javascript">
+let projdata = blanky
+
+function startProj() {
+  projdata = document.getElementById("project").value;
+  document.getElementById("applet").innerHTML = '<!DOCTYPE HTML SYSTEM "about:legacy-compat"><html><body><applet id="ProjectApplet" style="display:block" code="ScratchApplet" codebase="./" archive="jar/ScratchApplet.jar" height="387" width="482"><param name="project" value=' + projdata + "><h3>Your browser needs java to view projects</h3></applet>";
+}
+</script>
+<p>Recommended java player: <a href="https://chrome.google.com/webstore/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein">CheerpJ (uses WebAssembly to run java applet)</a></p>
